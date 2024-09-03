@@ -1,0 +1,20 @@
+﻿<Window x:Class="MongoDB_Login.Views.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding IsButtonVisible}">
+            <Button Content="Go to Login"
+                    Width="200"
+                    Height="50"
+                    Command="{Binding NavigateToLoginCommand}"/>
+        </StackPanel>
+
+        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+    </Grid>
+</Window>
